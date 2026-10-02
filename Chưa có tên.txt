@@ -1,0 +1,31 @@
+
+ Phần 1: Phân tích
+
+ Đường dẫn của Bình là đường dẫn tuyệt đối vì nó ghi đầy đủ vị trí của file trên máy:
+
+```
+C:\Users\Binh-K26\Documents\Python-Projects\Session-02\assets\logo.png
+```
+
+ Khi chuyển sang máy khác, đường dẫn này có thể không còn đúng vì máy giáo viên có thể không có ổ `C:` hoặc tên người dùng khác `Binh-K26`. Vì vậy Python không tìm thấy file `logo.png` và báo lỗi `FileNotFoundError`.
+
+ ## Phần 2: Sửa lỗi
+
+ Nếu file code nằm trong thư mục `Session-02` và ảnh nằm trong thư mục `assets`:
+
+```
+Session-02/
+├── main.py
+└── assets/
+    └── logo.png
+```
+
+ Thì có thể viết đường dẫn tương đối:
+
+```
+image_path = "./assets/logo.png"
+```
+
+ Trong đó `.` là thư mục hiện tại. Đường dẫn này không phụ thuộc vào tên máy hay tài khoản người dùng nên khi chuyển dự án sang máy khác sẽ dễ chạy hơn.
+
+ Nếu muốn, mình cũng có thể viết thành **kiểu trả lời 5–7 dòng như học sinh nộp bài**, nhìn tự nhiên hơn nữa.
